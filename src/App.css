@@ -1,0 +1,228 @@
+.app {
+  padding: 0;
+  width: 100%;
+  min-height: 100vh;
+  height: 100%;
+  overflow-y: auto;
+  overflow-x: hidden;
+  color: aliceblue;
+}
+
+.background-image {
+  position: fixed;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-image: url('https://textur.gas-kvas.com/uploads/posts/2024-05/thumbs/textur-gas-kvas-com-ngid-p-teksturi-fon-chernaya-tkan-14.jpg');
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+html, body, #root {
+  padding: 0;
+  overflow: hidden;
+  height: 100vh;
+  width: 100%;
+}
+
+header {
+  position: sticky;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 0 10vw;
+  top: 0;
+  z-index: 10;
+  width: 100%;
+  height: 65px;
+  background-color: rgba(0, 0, 0, 0.644);
+  backdrop-filter: blur(8px);
+}
+
+header h1 {
+  font-size: 2rem;
+  font-style: italic;
+  letter-spacing: 0.5px;
+}
+
+section {
+  padding: 0 10vw;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.664);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.25rem;
+  box-sizing: border-box;
+}
+
+section ul {
+  list-style: none;
+  width: 100%;
+  padding: 0;
+}
+
+section li {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-bottom: 5vh;
+  width: 100%;
+  gap: 10px;
+}
+
+h3 {
+  color: #fff;
+  font-size: 2em;
+  text-align: center;
+  width: 100%;
+  margin: 0;
+}
+
+span {
+  font-size: 0.9em;
+  color: rgba(240, 248, 255, 0.884);
+  display: flex;
+  gap: 10px;
+}
+
+button {
+  max-width: 250px;
+  border: 1px solid #ffffff5d;
+  border-radius: 5px;
+  padding: 10px 15px;
+  background-color: rgba(0, 0, 0, 0.432);
+  color: #fff;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  filter: brightness(1.5);
+}
+
+article img {
+  width: 100%;
+  height: 100%;
+}
+
+.modal-overlay {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  overflow-y: auto;
+  top: 0;
+  left: 0;
+  padding: 70px 0;
+  background-color: rgba(0, 0, 0, 0.877);
+  backdrop-filter: blur(10px);
+  transition: all 1s ease;
+  box-sizing: border-box;
+}
+
+.modal {
+  width: 100%;
+  padding: 15px 0;
+  margin: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 20px;
+  color: #fff;
+  font-size: 1.4rem;
+  box-sizing: border-box;
+}
+
+.modal input, .modal textarea {
+  display: flex;
+  position: relative;
+  background-color: transparent;
+  border: 1px solid #0e0e0e;
+  color: #fff;
+  font-size: 1.3rem;
+  font-weight: lighter;
+  padding: 10px 5px;
+  margin: 3px;
+  width: 100%;
+  min-width: 400px;
+}
+
+@media (max-width: 500px) {
+  .modal input, .modal textarea {
+    min-width: 300px !important;
+  }
+}
+
+.modal textarea {
+  min-height: 300px;
+}
+
+.loading,
+.loading-error {
+  z-index: 10;
+  position: fixed;
+  top: 15px;
+  left: 42.5%;
+  width: 210px;
+  height: 40px;
+  background-color: rgba(0, 0, 0, 0.582);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.75rem;
+  font-weight: bold;
+  text-align: center;
+  z-index: 11;
+  border-radius: 10px;
+  backdrop-filter: blur(20px);
+}
+
+.loading-error {
+  background-color: rgba(228, 18, 18, 0.185);
+  color: rgb(255, 255, 255);
+}
+
+.error {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  color: red;
+  width: 100%;
+  text-align: center;
+  font-size: 1rem;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0.5;
+  }
+}
+
+.loading text{
+  animation: blink 1s infinite alternate;
+}
+
+*::-webkit-scrollbar {
+  width: 3px; /* Для Chrome, Safari и Edge */
+}
+
+*::-webkit-scrollbar-track {
+  width: 3px; /* Для Chrome, Safari и Edge */
+  background-color: #e7e4e477;
+}
+
+*::-webkit-scrollbar-thumb {
+  width: 3px; /* Для Chrome, Safari и Edge */
+  background-color: #161616;
+}
